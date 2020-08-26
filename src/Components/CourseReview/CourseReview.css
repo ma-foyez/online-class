@@ -1,0 +1,59 @@
+.review .course-review {
+    border-bottom: 2px solid rgb(255, 123, 0);
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-family: monospace;
+    font-weight: bold;
+}
+.total-enroll-course{
+    background-color:rgb(24, 159, 172);
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    text-align: left;
+    text-transform: capitalize;
+
+    box-shadow: 5px 5px 5px gray;
+}
+.last-enroll{
+    border: 2px solid gray;
+    background-color: rgb(251, 125, 22);
+    border-radius: 25px;
+}
+.last-enroll-course img{
+    border: 3px solid gray;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.last-enroll-course{
+    background-color: rgb(24, 159, 172);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+    transition: 0.5s all;
+    color: white;
+}
+.last-enroll-course:hover{
+    background: white;
+    color: black;
+    box-shadow: none;
+}
+.enroll-confirm{
+    background-color: rgb(236, 233, 233);
+    padding: 8px 20px;
+    color: black;
+    border: 3px solid rgb(24, 159, 172);
+    outline: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    border-radius: 25px;
+}
+.enroll-confirm:focus{
+    outline: none;
+}
+.enroll-confirm:hover{
+    background: none;
+    background-color: rgb(24, 159, 172);
+    color: white;
+}
