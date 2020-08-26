@@ -20,7 +20,7 @@ const CourseContainer = () => {
             <div className="container mt-3">
                 <div className="row">
                     <div className="col-md-4">
-                        <div className="course-review pb-3">
+                        <div className="course-review pb-3 mb-3">
                             <CourseReview courseEnroll={enroll}></CourseReview>
                         </div>
                     </div>
