@@ -2,25 +2,38 @@ import React from 'react';
 import './CourseList.css'
 import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUsers, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faUsers, faUser, faStar, faKey, faIdBadge, faCertificate } from '@fortawesome/free-solid-svg-icons'
 
 const CourseList = (props) => {
     // console.log(props.passCourse);
     const { name, img, enroll, instructor, courseFee } = props.passCourse;
     return (
         <div className="course mb-3 p-3">
-            <div className="row d-flex align-items-center">
+            <div className="row">
                 <div className="col-md-6">
-                    <div className="text-center course-head">
+                    <div className="course-head text-center">
                         <img className="img-fluid img-thumbnail" src={img} alt="course img" />
-                        <h4 className="course-name mt-3">{name}</h4>
+                        <div className="top">
+                            <ul className="">
+                                <li><FontAwesomeIcon icon={faStar} /></li>
+                                <li><FontAwesomeIcon icon={faStar} /></li>
+                                <li><FontAwesomeIcon icon={faStar} /></li>
+                                <li><FontAwesomeIcon icon={faStar} /></li>
+                                <li><FontAwesomeIcon icon={faStar} color="gray" /></li>
+                            </ul>
+
+                            <h6 className="enrolled-students mt-3"> <FontAwesomeIcon icon={faUsers} /> {enroll} Students enrolled </h6>
+                        </div> <br />
+                        <h4 className="course-name mt-2">{name}</h4>
                     </div>
                 </div>
                 <div className="col-md-6">
                     <div className="course-details mt-3">
-                        <h5>Instractor : {instructor}</h5> <br/>
-                        <h5> Total Enrolled -- {enroll} <FontAwesomeIcon icon={faUsers} /> </h5>
-                        <h5>Course Fee : {courseFee} Tk</h5> <br />
+                        <h1 className="mt-3">{courseFee} Tk</h1>
+                        <h4 className="instructor">Instractor : {instructor}</h4> <hr />
+                        <h5 className="Opportunity"> <FontAwesomeIcon icon={faKey} className="fontIcon mr-2" /> UNLIMITED ACCESS</h5>
+                        <h5 className="Opportunity"><FontAwesomeIcon icon={faIdBadge} className="fontIcon mr-2" /> Course Badge</h5>
+                        <h5 className="Opportunity"> <FontAwesomeIcon icon={faCertificate} className="fontIcon mr-2" /> Course Certificate</h5> <br/>
                         <Button className="enroll-button" onClick={() => props.enrollHandler(props.passCourse)}><FontAwesomeIcon icon={faUser} /> Enroll Now</Button>
                     </div>
                 </div>

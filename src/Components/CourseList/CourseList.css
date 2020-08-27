@@ -11,9 +11,30 @@
     text-transform: capitalize;
     cursor: pointer;
     transition: 0.7s ease;
+    text-align: center;
 }
 .course-name:hover{
     color: rgb(24, 159, 172);
+}
+.enrolled-students{
+    color: rgb(124, 123, 123);
+    text-align: right;
+}
+.course-head ul{
+    list-style: none;
+}
+.course-head ul li, .fontIcon{
+    float: left;
+    color: rgb(235, 116, 18);
+    text-align: left;
+}
+.Opportunity, .instructor{
+    color: gray;
+    padding: 3px;
+}
+.course-details h1{
+    color: rgb(24, 159, 172);
+    font-weight: 900;
 }
 .enroll-button{
     background-color: rgb(24, 159, 172);

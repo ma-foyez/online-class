@@ -12,9 +12,11 @@
     border-radius: 10px;
     text-align: left;
     text-transform: capitalize;
-
     box-shadow: 5px 5px 5px gray;
 }
+/* .review .total-enroll-course h5, .last-enroll-course h5{
+    color: white;
+} */
 .last-enroll{
     border: 2px solid gray;
     background-color: rgb(251, 125, 22);
