@@ -2,11 +2,11 @@ import React from 'react';
 import './CourseList.css'
 import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUsers, faUser, faStar, faKey, faIdBadge, faCertificate } from '@fortawesome/free-solid-svg-icons'
+import { faUsers, faUser, faStar, faKey, faCertificate, faHandsHelping } from '@fortawesome/free-solid-svg-icons'
 
 const CourseList = (props) => {
     // console.log(props.passCourse);
-    const { name, img, enroll, instructor, courseFee } = props.passCourse;
+    const { name, img, enroll, instructor, courseFee, access, support, certificate } = props.passCourse;
     return (
         <div className="course mb-3 p-3">
             <div className="row">
@@ -31,9 +31,9 @@ const CourseList = (props) => {
                     <div className="course-details mt-3">
                         <h1 className="mt-3">{courseFee} Tk</h1>
                         <h4 className="instructor">Instractor : {instructor}</h4> <hr />
-                        <h5 className="Opportunity"> <FontAwesomeIcon icon={faKey} className="fontIcon mr-2" /> UNLIMITED ACCESS</h5>
-                        <h5 className="Opportunity"><FontAwesomeIcon icon={faIdBadge} className="fontIcon mr-2" /> Course Badge</h5>
-                        <h5 className="Opportunity"> <FontAwesomeIcon icon={faCertificate} className="fontIcon mr-2" /> Course Certificate</h5> <br/>
+                        <h5 className="Opportunity"> <FontAwesomeIcon icon={faKey} className="fontIcon mr-2" /> {access} </h5>
+                        <h5 className="Opportunity"><FontAwesomeIcon icon={faHandsHelping} className="fontIcon mr-2" /> {support} </h5>
+                        <h5 className="Opportunity"> <FontAwesomeIcon icon={faCertificate} className="fontIcon mr-2" /> {certificate}</h5> <br />
                         <Button className="enroll-button" onClick={() => props.enrollHandler(props.passCourse)}><FontAwesomeIcon icon={faUser} /> Enroll Now</Button>
                     </div>
                 </div>
